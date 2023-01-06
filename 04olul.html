@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 관련 태그</title>
+</head>
+<body>
+<h1>목록 관련 태그</h1>
+<h2>개요</h2>
+<p>깔끔한 정보전달을 위해 여러 요소들을 일렬로 나열한 명단이나 목록을 의미</p>
+<p>html에서는 목록을 표현하기 위해 순서없는 목록, 순서 있는 목록, 정의 목록 등을 지원함</p>
+<h2>순서없는 목록(unordered)</h2>
+<p>명단의 요소를 기호로 나타내는 목록의 형태</p>
+<p>ul, li 태그 등을 이용해 표현</p>
+<p>목록에 사용 가능한 기호는 circle, square, disc 등이 있음</p>
+
+<h3>내가 좋아하는 점심메뉴</h3>
+<ul style="list-style: circle">
+  <li>돈까스</li>
+  <li>월남쌈</li>
+</ul>
+<ul style="list-style: square">
+  <li>비빔밥</li>
+  <li>고기만두</li>
+</ul>
+  <ul style="list-style: disc">
+  <li>국밥</li>
+  <li>순살후라이드치킨</li>
+</ul>
+
+<h2>순서있는 목록(ordered)</h2>
+<p>명단의 요소를 순서가 있는 기호로 나타내는 목록의 형태</p>
+<p>ol, li 태그 등을 이용해 표현</p>
+<p>목록에 사용 가능한 기호는 decimal, alpha, roman 등 여러 종류가 있음</p>
+<p>한글도 되긴 하는데 되는 브라우저가 있고 안되는 브라우저가 있음<br>
+브라우저에 따라 hangul 또는 -moz-hangul로 작동할 수도 있음</p>
+
+<h3>내가 좋아하는 점심메뉴</h3>
+<ol style="list-style: decimal">
+  <li>돈까스</li>
+  <li>월남쌈</li>
+</ol>
+<ol style="list-style: lower-alpha">
+  <li>비빔밥</li>
+  <li>고기만두</li>
+</ol>
+<ol style="list-style: hangul">
+  <li>국밥</li>
+  <li>순살후라이드치킨</li>
+</ol>
+
+해당 목록은 작성자의 실제 기호 순위와 아무 연관 없음
+
+<h2>정의 목록(definition)</h2>
+<p>용어와 그 용어에 대한 해설을 모아놓은 목록</p>
+<p>dl, dt, dd 태그 등을 이용해 표현</p>
+
+<h3>웹 표준 용어</h3>
+<dl>
+  <dt>html</dt> <dd>웹 사이트를 구성하는 웹 문서 작성에 사용하는 마크업 언어</dd>
+  <dt>CSS</dt> <dd>html로 작성된 문서를 시각적으로 꾸밀 때 사용</dd>
+  <dt>Javascript</dt> <dd>html에 사용하는 객체기반 스크립트 프로그래밍 언어</dd>
+</dl>
+
+<h2>목록 중첩(nested)하기</h2>
+<p>목록을 구성하는 요소들을 구조화(structured)된 정보형태로 나타낼 때 주로 사용됨</p>
+<p>목록 속에 또 다른 목록을 포함시킴<br>
+(ul->ul, ul->ol 등..)</p>
+
+<h3>내가 좋아하는 점심메뉴</h3>
+<ul>
+  <li>양식
+      <ul>
+        <li>돈까스</li>
+      </ul>
+  </li>
+  <li>한식
+        <ul>
+          <li>김밥</li>
+          <li>비빔밥</li>
+          <li>고기만두</li>
+          <li>국밥</li>
+        </ul>
+  </li>
+  <li>그 외
+        <ul>
+          <li>월남쌈</li>
+          <li>순살후라이드치킨</li>
+        </ul>
+  </li>
+</ul>
+
+<h2>네비게이션 구조 작성 시 목록 사용</h2>
+<p>웹 페이지의 gnb(Global Navigation Bar), lnb(local Navigation Bar),<br>
+  snb(side Navigation Bar), fnb(Foot Navigation Bar) 등을 만들 때 사용</p>
+<h2>네이버 GNB</h2>
+
+<nav>
+  <ul>
+    <li><a href="https://mail.naver.com">메일</a></li>
+    <li><a href="https://section.cafe.naver.com">카페</a></li>
+    <li><a href="https://section.blog.naver.com">블로그</a></li>
+    <li><a href="https://kin.naver.com">지식iN</a></li>
+    <li><a href="https://shopping.naver.com/home">쇼핑</a></li>
+    <li><a href="https://shoppinglive.naver.com/home">쇼핑 LIVE</a></li>
+    <li><a href="https://order.pay.naver.com/home">Pay</a></li>
+    <li><a href="https://tv.naver.com">▷TV</a></li>
+    <li><a href="https://dict.naver.com">사전</a></li>
+    <li><a href="https://news.naver.com">뉴스</a></li>
+    <li><a href="https://finance.naver.com">증권</a></li>
+    <li><a href="https://land.naver.com">부동산</a></li>
+    <li><a href="https://map.naver.com">지도</a></li>
+    <li><a href="https://vibe.naver.com/about/">VIBE</a></li>
+    <li><a href="https://search.shopping.naver.com/book/home">도서</a></li>
+    <li><a href="https://comic.naver.com/index">웹툰</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>
