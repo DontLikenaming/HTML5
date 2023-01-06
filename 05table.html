@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>테이블 관련 태그</title>
+  <style>
+    /* embeded css style(스타일 안에서는 주석 형태가 다름) */
+    table {outline: 1px solid black; outline-offset: -1px; width: 900px}
+      th, td {outline: 1px solid black; padding: 10px; text-align: center}
+      tr:nth-child(even) {background: aliceblue}
+      tr:nth-child(odd) {background: lightgray}
+      tr:first-child {background: beige}
+      tr {height:35px}
+    /* 높이나 너비 등의 px 단위는 정수만 쓸 수 있음 */
+    table:nth-of-type(2){width:300px; height:300px}
+    table:nth-of-type(3){width:300px; height:300px}
+  </style>
+</head>
+<body>
+<h1>테이블 관련 태그</h1>
+<h2>개요</h2>
+<p>여러 종류의 데이터를 일목요연하게 2차원 형태의 표로 나타내기 위해 사용하는 요소</p>
+<p>table 태그: 테이블 시작, th 태그: 테이블 제목, tr 태그: 행, td 태그: 열</p>
+<p>테이블에 사용되는 css 속성<br>
+  (width, height, padding, border-collapse 등..)</p>
+<h3>사원(employee) 테이블</h3>
+<table>
+  <tr>
+    <th>사원 번호</th>
+    <th>이름</th>
+    <th>성</th>
+    <th>이메일</th>
+    <th>전화번호</th>
+    <th>입사일</th>
+    <th>직책</th>
+    <th>연봉</th>
+    <th>수당</th>
+    <th>상사번호</th>
+    <th>부서번호</th>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td> &nbsp;
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td> &nbsp;
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td> &nbsp;
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td> &nbsp;
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td>
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>Steven</td>
+    <td>King</td>
+    <td>SKING</td>
+    <td>515.123.4567</td>
+    <td>2003-06-17</td>
+    <td>AD_PRES</td> &nbsp;
+    <td>24000</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>90</td>
+  </tr>
+</table>
+<hr>
+<h2>복잡한 표 만들기</h2>
+<p>복잡한 형태의 테이블을 작성할 땐 colspan/rowspan 속성을 쓸 수 있다.</p>
+<p>colspan은 여러 열을 합쳐 하나의 열로 만듬</p>
+<p>rowspan은 여러 행을 합쳐 하나의 행로 만듬</p>
+<p>더 복잡한 표를 만들기 위해 표 안에 표를 넣을 수도 있으나 권장되진 않음</p>
+
+<img src="img/table_span.jpg" alt="표" width="300px" height="300px">
+
+<table>
+  <tr>
+    <td colspan="5">1, 2, 3, 4, 5</td>
+  </tr>
+  <tr>
+    <td rowspan="2">6</td>
+    <td rowspan="2">7</td>
+    <td rowspan="2">8</td>
+    <td colspan="2" rowspan="2">9, 10</td>
+  </tr>
+  <tr></tr>
+  <tr>
+    <td colspan="2">16, 17</td>
+    <td colspan="3">18, 19, 20</td>
+  </tr>
+  <tr>
+    <td colspan="3">21, 22, 23</td>
+    <td colspan="2">24, 25</td>
+  </tr>
+</table>
+<br>
+<table>
+  <tr>
+    <td colspan="5">1, 2, 3, 4, 5</td>
+    <!--<td>2</td>
+    <td>2</td>
+    <td>2</td>
+    <td>2</td>-->
+  </tr>
+  <tr>
+    <td rowspan="2">6</td>
+    <td rowspan="2">7</td>
+    <td rowspan="2">8</td>
+    <td colspan="2" rowspan="2">9, 10</td>
+<!--    <td>10</td>-->
+  </tr>
+  <tr>
+<!--<td>11</td>
+    <td>12</td>
+    <td>13</td>
+    <td>14</td>
+    <td>15</td>-->
+  </tr>
+  <tr>
+    <td colspan="2">16, 17</td>
+<!--    <td>17</td>-->
+    <td colspan="3">18, 19, 20</td>
+<!--<td>19</td>
+    <td>20</td>-->
+  </tr>
+  <tr>
+    <td colspan="3">21, 22, 23</td>
+<!--<td>22</td>
+    <td>23</td>-->
+    <td colspan="2">24, 25</td>
+<!--<td>20</td>-->
+  </tr>
+</table>
+<hr>
+<h2>테이블 너비 지정</h2>
+<p>테이블 요소의 크기를 지정하는 단위는 px, %임</p>
+<p>크기를 px로 지정하면 고정 크기라 브라우저의 크기에 영향을 받지 않음</p>
+<p>크기를 %로 지정하면 화면 비율에 따른 크기가 되어버려 브라우저의 크기에 따라 테이블의 크기도 변함
+</p>
+
+<table style="width:750px; outline:1px solid red">
+  <tr>
+    <td>테이블1(750px)</td>
+  </tr>
+</table>
+<table style="width:45%; outline:1px solid blue">
+  <tr>
+    <td>테이블2(45%)</td>
+  </tr>
+</table>
+<br>
+<hr>
+<h2>테이블 안의 테이블 실습</h2>
+<img src="img/pasted%20image%200.png" alt="표2" width="1100px" height="300px">
+<table style="width:1100px; text-align: center; background: white">
+  <tr>
+    <th>훈련과정</th>
+    <td colspan="2">AWS 클라우드기반 자바&amp;스프링&amp;리엑트<br>풀스택 개발자 양성 과정</td>
+    <th>훈련기간</th>
+    <td colspan="2">2022-12-19 ~ 2023-06-09</td>
+  </tr>
+  <tr style="background:white">
+    <th>평가일시</th>
+    <td>2023년 01월 06일</td>
+    <th>훈련생</th>
+    <td style="text-align: right">(인)</td>
+    <td><b>훈련교사</b></td>
+    <td>홍 길 동 (인)</td>
+  </tr>
+  <tr>
+    <td colspan="6">
+      <table style="width:1100px; margin: -12px">
+        <tr>
+          <th colspan="2">교과목명</th>
+          <th>평가방법</th>
+          <th>배점</th>
+          <th>점수</th>
+          <th>총점</th>
+          <th style="width: 170px">성취수준</th>
+        </tr>
+        <tr style="background:white">
+          <td colspan="2" rowspan="2"><b>데이터베이스</b></td>
+          <td>서술형/선택형</td>
+          <td>30</td>
+          <td>&nbsp;</td>
+          <td rowspan="2">&nbsp;</td>
+          <td rowspan="2">&nbsp;</td>
+        </tr>
+        <tr style="background:white">
+          <td>포트폴리오</td>
+          <td>70</td>
+          <td>&nbsp;</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr style="background:white">
+    <th>성취수준 환산</th>
+    <th>매우우수(5수준)</th>
+    <th>우수(4수준)</th>
+    <th>보통(3수준)</th>
+    <th>미흡(2수준)</th>
+    <th>매우미흡(1수준)</th>
+  </tr>
+  <tr style="background:#6CFFD7">
+    <th>성취기준</th>
+    <td>90~100점</td>
+    <td>80~89점</td>
+    <td>70~79점</td>
+    <td>60~69점</td>
+    <td>60점미만</td>
+  </tr>
+</table>
+
+
+
+
+
+<p></p>
+<p></p>
+</body>
+</html>
