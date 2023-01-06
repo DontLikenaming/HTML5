@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>색상 관련 태그</title>
+</head>
+<body>
+<h1>색상 관련 태그</h1>
+<h2>html4에서의 색 표현</h2><br>
+해당 기능은 html5에서도 가능함
+<p>html에서 색을 표현하는 방법은<br> 1. 색상 이름 (red, blue 등)<br><br> 2. RGB색상값<br><br> 3. 16진수색상값<br><br> 등이 있음</p>
+<p>W3C에서 정한 표준색상은 총 16개가 있음</p>
+<p>단, 주요 브라우저는 140여개 색상을 지원함</p>
+<p>자세한 색상 이름은 <a href="https://htmlcolorcodes.com/">htmlcolorcodes.com</a>을 참조</p>
+<p>html5에서는 color 태그는 쓸 수 없으므로 CSS를 통해 색상을 지정해야 함</p>
+
+<div style="background: red; color: white">빨강</div>
+<div style="background: orange; color: white">주황</div>
+<div style="background: yellow">노랑</div>
+<div style="background: green; color: white">초록</div>
+<div style="background: blue; color: white">파랑</div>
+<div style="background: navy; color: white">남색</div>
+<div style="background: purple; color: white">보라</div>
+
+<hr>
+
+<p>RGB 색상값은 RGB 색상을 10진수로 각각 변환한 값임</p>
+<p>R, G, B 색상값은 00 ~ 255 범위를 가짐</p>
+<p>표기 방법은 'rgb(3개의 10진수 값)'임</p>
+<p>또한, rgb는 색상에 투명도를 적용할 수 있음 'rgba(3개의 10진수 값)'</p>
+
+<div style="background: rgb(255,0,0); color: rgb(255,255,255)">빨강</div>
+<div style="background: rgb(255,170,0); color: rgb(255,255,255)">주황</div>
+<div style="background: rgb(255,255,0)">노랑</div>
+<div style="background: rgb(0,128,0); color: rgb(255,255,255)">초록</div>
+<div style="background: rgb(0,0,255); color: rgb(255,255,255)">파랑</div>
+<div style="background: rgb(0,0,128); color: rgb(255,255,255)">남색</div>
+<div style="background: rgb(128,0,128); color: rgb(255,255,255)">보라</div><br>
+<div style="background: rgba(0,0,0,0.2)">바탕색 투명도 조절</div>
+<div style="background: rgba(0,0,0,0.4)">바탕색 투명도 조절</div>
+<div style="background: rgba(0,0,0,0.6)">바탕색 투명도 조절</div>
+<div style="background: rgba(0,0,0,0.8); color: rgb(255,255,255)">바탕색 투명도 조절</div>
+
+<hr>
+
+<p>16진수 색상값은 RGB 색상값을 16진수로 각각 변환한 값임</p>
+<p>R, G, B 색상값은 00 ~ FF 범위를 가짐</p>
+<p>표기 방법은 '&sharp;3개의 16진수 값'임</p>
+
+<div style="background: #FF0000; color: #FFFFFF">빨강</div>
+<div style="background: #FFAA00; color: #FFFFFF">주황</div>
+<div style="background: #FFFF00">노랑</div>
+<div style="background: #008000; color: #FFFFFF">초록</div>
+<div style="background: #0000FF; color: #FFFFFF">파랑</div>
+<div style="background: #000080; color: #FFFFFF">남색</div>
+<div style="background: #800080; color: #FFFFFF">보라</div>
+
+<hr>
+
+<h2>html5에서의 색 표현</h2>
+<p>html5에서는 색상/채도/명도 등으로 색상을 표현하는<br>
+hsl/hsla 색상코드가 도입됨</p>
+<p>16진수 색상, rgb 색상, hsl/hsla 색상 지원됨</p>
+<p>이 외에 hwb, cmyk 색상코드로도 색을 표현할 수 있지만<br>
+  이들은 html5에서는 지원하지 않고 css4에서는 지원될 예정임</p>
+
+</body>
+</html>
